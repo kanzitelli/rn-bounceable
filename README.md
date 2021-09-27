@@ -1,33 +1,21 @@
-<img src="https://xxx-files.ggc.team/oss/if-component/if-component-readme.png" width="100%" title="Logo">
+### Quick start
 
-### Install it
+Make sure you have [react-native-reanimated](https://github.com/software-mansion/react-native-reanimated) and [react-native-gesture-handler](https://github.com/software-mansion/react-native-gesture-handler) installed in your project.
 
-```🤏
-yarn add @kanzitelli/if-component
+```bash
+> yarn add rn-bounceable
 ```
 
-### Use it
+### Usage
 
 ```tsx
-import {If} from '@kanzitelli/if-component';
+import {Bounceable} from 'rn-bounceable';
 
 class OrdersScreen = () => {
   return (
-    <>
-      <If _={loading}
-      _then={<LoadingIndicator />}
-      _else={<SomethingElse />} />
-    </>
+    <Bounceable onPress={() => alert('onPress')}>
+      <Image source={imageSource} />
+    </Bounceable>
   )
 }
 ```
-
-### TS lib starter
-
-```bash
-> git clone https://github.com/kanziteli/if-component rn-lib
-> cd rn-lib && rm -rf .git
-> yarn
-```
-
-Don't forget to change your lib's name in `package.json` and check other scripts.
