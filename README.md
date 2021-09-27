@@ -19,3 +19,9 @@ class OrdersScreen = () => {
   )
 }
 ```
+
+### Example
+
+Example could be found in `expo-example` folder.
+
+See it in Expo Go - https://expo.io/@kanzitelli/rn-bounceable-example.

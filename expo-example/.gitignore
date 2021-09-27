@@ -1,9 +1,4 @@
 node_modules/
-*.log
-lib/
-*.env
-
-# Expo
 .expo/
 npm-debug.*
 *.jks
