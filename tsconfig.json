@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+      "target": "esnext",
+      "module": "commonjs",
+      "lib": [
+          "es6",
+          "es2015",
+          "dom"
+      ],
+      "declaration": true,
+      "jsx": "react-native",
+      "outDir": "lib",
+      "rootDir": "src",
+      "strict": true,
+      "types": [
+          "node"
+      ],
+      "esModuleInterop": true,
+      "resolveJsonModule": true
+  }
+}

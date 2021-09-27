@@ -1,0 +1,43 @@
+{
+  "name": "@kanzitelli/rn-bounceable",
+  "version": "0.1.0",
+  "description": "Native bounceable effect for any React (Native) component. Built with Reanimated. Compatible with Expo.",
+  "author": "Batyr (dev@batyr.io)",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "cd src && tsc && cp ../package.json ../lib/ && echo Build completed!",
+    "clean": "rm -rf ./node_modules ./package-lock.json && yarn",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format:check": "prettier --check ./src",
+    "format:write": "prettier --write ./src",
+    "release:github": "npm run build && dotenv release-it",
+    "release:npm:public": "npm run build && npm publish --access public",
+    "release:npm:private": "npm run build && npm publish",
+    "publish:npm": "npm run build && npm publish"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "if-component"
+  ],
+  "peerDependencies": {
+    "react": ">= 16.x.x",
+    "react-native": ">= 0.62.0",
+    "react-native-gesture-handler": ">= 1.4.0",
+    "react-native-reanimated": ">= 2.0.0"
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "^3.0.1",
+    "@types/node": "^16.10.1",
+    "@types/react": "^17.0.24",
+    "@types/react-native": "^0.65.1",
+    "dotenv-cli": "^4.0.0",
+    "eslint": "^7.32.0",
+    "prettier": "^2.4.1",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-reanimated": "^2.2.2",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "license": "MIT"
+}
