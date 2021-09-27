@@ -31,6 +31,8 @@ export const Bounceable: React.FC<BouncableProps> = ({
 }: BouncableProps) => {
   const scale = useSharedValue(1);
   const sz = useAnimatedStyle(() => {
+    'worklet';
+
     return {
       transform: [
         {
