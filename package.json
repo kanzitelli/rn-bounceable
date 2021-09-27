@@ -1,5 +1,5 @@
 {
-  "name": "@kanzitelli/rn-bounceable",
+  "name": "rn-bounceable",
   "version": "0.0.1",
   "description": "Native bounceable effect for any React (Native) component. Built with Reanimated. Compatible with Expo.",
   "author": "Batyr (dev@batyr.io)",
