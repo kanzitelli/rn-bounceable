@@ -22,6 +22,8 @@ class OrdersScreen = () => {
 
 ### Example
 
-Example could be found in `expo-example` folder.
+Example could be found under `expo-example` folder.
 
 See it in Expo Go - https://expo.io/@kanzitelli/rn-bounceable-example.
+
+This library was bootstrapped from [kanzitelli/if-component](https://github.com/kanzitelli/if-component).
