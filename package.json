@@ -4,8 +4,11 @@
   "description": "Native bounceable effect for any React (Native) component. Built with Reanimated. Compatible with Expo.",
   "author": "Batyr (dev@batyr.io)",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "build": "cd src && tsc && cp ../package.json ../lib/ && echo Build completed!",
+    "prebuild": "rm -rf lib",
+    "build": "tsc && echo Build completed!",
+    "postbuild": "prettier --write ./lib",
     "clean": "rm -rf ./node_modules ./package-lock.json && yarn",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format:check": "prettier --check ./src",
@@ -22,6 +25,7 @@
     "bounceable",
     "reanimated"
   ],
+  "files": ["lib"],
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
@@ -30,7 +34,7 @@
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^3.0.1",
-    "@types/node": "^16.10.1",
+    "@tsconfig/react-native": "^1.0.4",
     "@types/react": "^17.0.24",
     "@types/react-native": "^0.65.1",
     "dotenv-cli": "^4.0.0",
@@ -40,7 +44,6 @@
     "react-native": "^0.65.1",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-reanimated": "^2.2.2",
-    "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   },
   "license": "MIT"

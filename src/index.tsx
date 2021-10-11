@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ViewStyle} from 'react-native';
+import {StyleProp, ViewStyle} from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -8,13 +8,12 @@ import Animated, {
 } from 'react-native-reanimated';
 import {TapGestureHandler, State} from 'react-native-gesture-handler';
 
-type BouncableProps = {
-  children: React.ReactNode;
+export type BouncableProps = {
   disabled?: boolean;
   onPress?: () => void;
   activeScale?: number;
   springConfig?: Animated.WithSpringConfig;
-  contentContainerStyle?: ViewStyle;
+  contentContainerStyle?: StyleProp<ViewStyle>;
 };
 
 export const Bounceable: React.FC<BouncableProps> = ({
@@ -27,8 +26,8 @@ export const Bounceable: React.FC<BouncableProps> = ({
     mass: 1,
     stiffness: 300,
   },
-  contentContainerStyle = {},
-}: BouncableProps) => {
+  contentContainerStyle,
+}) => {
   const scale = useSharedValue(1);
   const sz = useAnimatedStyle(() => {
     'worklet';

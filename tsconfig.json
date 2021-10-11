@@ -1,28 +1,12 @@
 {
-    "compilerOptions": {
-      "target": "esnext",
-      "module": "commonjs",
-      "lib": ["es6"],
-      "allowJs": true,
-      "jsx": "react-native",
-      "noImplicitAny": false,
-      "incremental": true,
-      "isolatedModules": true,
-      "strict": true,
-      "moduleResolution": "node",
-      "skipLibCheck": true,
-      "baseUrl": "./",
-      "outDir": "lib",
-      "noEmitHelpers": true,
-      "importHelpers": true,
-      "experimentalDecorators": true,
-      "allowSyntheticDefaultImports": true,
-      "esModuleInterop": true,
-      "declaration": true,
-      "sourceMap": true,
-    },
-    "exclude": [
-      "node_modules",
-      "lib"
-    ]
-  }
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "rootDir": "src",
+    "outDir": "lib",
+    "declaration": true,
+    "skipLibCheck": true,
+    "module": "ES2020",
+  },
+  "exclude": ["node_modules", "lib", "expo-example"]
+}
