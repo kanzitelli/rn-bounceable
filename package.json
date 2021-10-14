@@ -1,7 +1,7 @@
 {
   "name": "rn-bounceable",
   "version": "0.2.0-rc1",
-  "description": "Native bounceable effect for any React (Native) component. Built with Reanimated. Compatible with Expo.",
+  "description": "Native bounceable effect for any React Native component. Built with Reanimated. Compatible with Expo.",
   "author": "Batyr (dev@batyr.io)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -16,7 +16,8 @@
     "release:github": "npm run build && dotenv release-it",
     "release:npm:public": "npm run build && npm publish --access public",
     "release:npm:private": "npm run build && npm publish",
-    "publish:npm": "npm run build && npm publish"
+    "publish:npm": "npm run build && npm publish",
+    "publish:npm:next": "npm run build && npm publish --tag next"
   },
   "keywords": [
     "react",
