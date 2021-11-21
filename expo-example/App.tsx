@@ -1,14 +1,18 @@
 import 'react-native-gesture-handler';
+import React, {useState} from 'react';
+import {StyleSheet, Text, View, Image, Linking} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 import {StatusBar} from 'expo-status-bar';
-import React from 'react';
-import {StyleSheet, Text, View, Alert, Image, Linking} from 'react-native';
 import {Bounceable} from 'rn-bounceable';
 
 export default function App() {
+  const [text, setText] = useState('Press any component below');
   const imageSource = {uri: 'https://static.expo.dev/static/brand/square-512x512.png'};
 
+  const changeText = (text: string) => () => setText(text);
+
   return (
-    <View style={S.container}>
+    <ScrollView contentContainerStyle={S.container}>
       <StatusBar style="auto" />
 
       <View style={{paddingBottom: 24}}>
@@ -20,10 +24,12 @@ export default function App() {
       </View>
 
       <View style={S.bounceables}>
+        <Text>{text}</Text>
+
         <View style={S.bounceable}>
           <Bounceable
-            onPress={() => Alert.alert('text:onPress')}
-            onLongPress={() => Alert.alert('text:onLongPress')}
+            onPress={changeText('text:onPress')}
+            onLongPress={changeText('text:onLongPress')}
           >
             <Text style={S.text}>Bounceable Text</Text>
           </Bounceable>
@@ -31,8 +37,8 @@ export default function App() {
 
         <View style={S.bounceable}>
           <Bounceable
-            onPress={() => Alert.alert('image:onPress')}
-            onLongPress={() => Alert.alert('image:onLongPress')}
+            onPress={changeText('image:onPress')}
+            onLongPress={changeText('image:onLongPress')}
           >
             <Image style={S.image} source={imageSource} />
           </Bounceable>
@@ -40,8 +46,8 @@ export default function App() {
 
         <View style={S.bounceable}>
           <Bounceable
-            onPress={() => Alert.alert('image+text:onPress')}
-            onLongPress={() => Alert.alert('image+text:onLongPress')}
+            onPress={changeText('image+text:onPress')}
+            onLongPress={changeText('image+text:onLongPress')}
           >
             <View style={{alignItems: 'center'}}>
               <Image style={S.image} source={imageSource} />
@@ -52,18 +58,18 @@ export default function App() {
 
         <View style={S.bounceable}>
           <Bounceable
-            onPress={() => Alert.alert('image+text:onPress & delayActiveScale')}
-            onLongPress={() => Alert.alert('image+text:onLongPress & delayActiveScale')}
+            onPress={changeText('image+text:onPress & delayActiveScale')}
+            onLongPress={changeText('image+text:onLongPress & delayActiveScale')}
             delayActiveScale={500}
           >
             <View style={{alignItems: 'center'}}>
               <Image style={S.image} source={imageSource} />
-              <Text style={S.text}>Bounceable image and text with active scale delay</Text>
+              <Text style={S.text}>Bounceable image and text with active scale delay 500ms</Text>
             </View>
           </Bounceable>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
