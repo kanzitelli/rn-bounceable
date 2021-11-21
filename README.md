@@ -2,6 +2,10 @@
   <img src="https://xxx-files.ggc.team/oss/rn-bounceable/logo.png" width="80%" title="Logo">
 </p>
 
+
+https://user-images.githubusercontent.com/4402166/142771470-a1210a92-9a74-4205-b023-b8ac2403dd84.MP4
+
+
 ## Quick start
 
 ```bash
