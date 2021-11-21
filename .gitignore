@@ -2,6 +2,7 @@ node_modules/
 *.log
 lib/
 *.env
+assets
 
 # Expo
 .expo/
