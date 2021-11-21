@@ -5,24 +5,53 @@ import {StyleSheet, Text, View, Alert, Image} from 'react-native';
 import {Bounceable} from 'rn-bounceable';
 
 export default function App() {
+  const imageSource = {uri: 'https://static.expo.dev/static/brand/square-512x512.png'};
+
   return (
     <View style={S.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
 
       <View style={S.bounceables}>
         <View style={S.bounceable}>
-          <Bounceable onPress={() => Alert.alert('Text')}>
+          <Bounceable
+            onPress={() => Alert.alert('text:onPress')}
+            onLongPress={() => Alert.alert('text:onLongPress')}
+          >
             <Text style={S.text}>Bounceable Text</Text>
           </Bounceable>
         </View>
 
         <View style={S.bounceable}>
-          <Bounceable onPress={() => Alert.alert('Image')}>
-            <Image
-              style={S.image}
-              source={{uri: 'https://static.expo.dev/static/brand/square-512x512.png'}}
-            />
+          <Bounceable
+            onPress={() => Alert.alert('image:onPress')}
+            onLongPress={() => Alert.alert('image:onLongPress')}
+          >
+            <Image style={S.image} source={imageSource} />
+          </Bounceable>
+        </View>
+
+        <View style={S.bounceable}>
+          <Bounceable
+            onPress={() => Alert.alert('image+text:onPress')}
+            onLongPress={() => Alert.alert('image+text:onLongPress')}
+          >
+            <View style={{alignItems: 'center'}}>
+              <Image style={S.image} source={imageSource} />
+              <Text style={S.text}>Bounceable image and text</Text>
+            </View>
+          </Bounceable>
+        </View>
+
+        <View style={S.bounceable}>
+          <Bounceable
+            onPress={() => Alert.alert('image+text:onPress & delayActiveScale')}
+            onLongPress={() => Alert.alert('image+text:onLongPress & delayActiveScale')}
+            delayActiveScale={500}
+          >
+            <View style={{alignItems: 'center'}}>
+              <Image style={S.image} source={imageSource} />
+              <Text style={S.text}>Bounceable image and text with active scale delay</Text>
+            </View>
           </Bounceable>
         </View>
       </View>
@@ -39,7 +68,6 @@ const S = StyleSheet.create({
   },
 
   bounceables: {
-    marginTop: 60,
     alignItems: 'center',
   },
   bounceable: {
@@ -47,6 +75,8 @@ const S = StyleSheet.create({
   },
   text: {
     fontSize: 22,
+    marginTop: 8,
+    textAlign: 'center',
   },
   image: {
     height: 100,
