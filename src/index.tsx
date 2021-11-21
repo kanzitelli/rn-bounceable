@@ -112,7 +112,7 @@ export const Bounceable: React.FC<BounceableProps> = ({
                 endScale();
                 runOnJS(onLongPress)();
               }
-            }, delayLongPress);
+            }, delayLongPress + delayActiveScale);
           }
 
           return;
