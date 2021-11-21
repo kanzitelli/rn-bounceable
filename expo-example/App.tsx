@@ -6,20 +6,19 @@ import {StatusBar} from 'expo-status-bar';
 import {Bounceable} from 'rn-bounceable';
 
 export default function App() {
-  const [text, setText] = useState('Press any component below');
   const imageSource = {uri: 'https://static.expo.dev/static/brand/square-512x512.png'};
+  const githubLink = 'https://github.com/kanzitelli/rn-bounceable';
 
+  const [text, setText] = useState('Press any component below');
   const changeText = (text: string) => () => setText(text);
 
   return (
     <ScrollView contentContainerStyle={S.container}>
       <StatusBar style="auto" />
 
-      <View style={{paddingBottom: 24}}>
-        <Bounceable onPress={() => Linking.openURL('https://github.com/kanzitelli/rn-bounceable')}>
-          <Text style={{fontSize: 32, textDecorationLine: 'underline', color: 'blue'}}>
-            RN Bounceable ⎆
-          </Text>
+      <View style={S.linkContainer}>
+        <Bounceable onPress={() => Linking.openURL(githubLink)}>
+          <Text style={S.linkText}>RN Bounceable ⎆</Text>
         </Bounceable>
       </View>
 
@@ -96,5 +95,14 @@ const S = StyleSheet.create({
     height: 100,
     width: 100,
     borderRadius: 20,
+  },
+
+  linkContainer: {
+    paddingBottom: 24,
+  },
+  linkText: {
+    fontSize: 26,
+    textDecorationLine: 'underline',
+    color: 'blue',
   },
 });
