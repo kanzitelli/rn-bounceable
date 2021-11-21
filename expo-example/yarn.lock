@@ -5367,10 +5367,10 @@ rimraf@~2.6.2:
   dependencies:
     glob "^7.1.3"
 
-rn-bounceable@^0.2.1-rc.19:
-  version "0.2.1-rc.19"
-  resolved "https://registry.yarnpkg.com/rn-bounceable/-/rn-bounceable-0.2.1-rc.19.tgz#10239f5c5453850ddee770f05a8b51499dc41942"
-  integrity sha512-xTGMURJqN8X0OkkhHJmd7+KFybyhF83xTgXx46plUlfhuif+mVUy28E1qHudVZmMMa9RbVbw/ZQviki2XB1xZg==
+rn-bounceable@^0.2.1-rc.20:
+  version "0.2.1-rc.20"
+  resolved "https://registry.yarnpkg.com/rn-bounceable/-/rn-bounceable-0.2.1-rc.20.tgz#9e9ca53040c56e6e0b07ee3b7ea896f04d986bd2"
+  integrity sha512-zUjIh8bpRC4uZZ/uDXMqgMA2EX0zA9QQBg65FFO+Mt2h5tHIr093nSdHnIPjc0AXzXnkNUXIbvXOhGuNq6bN3g==
 
 rsvp@^4.8.4:
   version "4.8.5"
