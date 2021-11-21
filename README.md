@@ -3,9 +3,6 @@
 </p>
 
 
-https://user-images.githubusercontent.com/4402166/142771470-a1210a92-9a74-4205-b023-b8ac2403dd84.MP4
-
-
 ## Quick start
 
 ```bash
@@ -53,6 +50,8 @@ Examples could be found in `expo-example` folder or in [expo-starter](https://gi
 See it in Expo Go - https://expo.io/@kanzitelli/rn-bounceable-example.
 
 This library was bootstrapped from [kanzitelli/if-component](https://github.com/kanzitelli/if-component).
+
+https://user-images.githubusercontent.com/4402166/142771470-a1210a92-9a74-4205-b023-b8ac2403dd84.MP4
 
 ## License
 
