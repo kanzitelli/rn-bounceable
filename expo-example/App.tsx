@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import {StatusBar} from 'expo-status-bar';
 import React from 'react';
-import {StyleSheet, Text, View, Alert, Image} from 'react-native';
+import {StyleSheet, Text, View, Alert, Image, Linking} from 'react-native';
 import {Bounceable} from 'rn-bounceable';
 
 export default function App() {
@@ -10,6 +10,14 @@ export default function App() {
   return (
     <View style={S.container}>
       <StatusBar style="auto" />
+
+      <View style={{paddingBottom: 24}}>
+        <Bounceable onPress={() => Linking.openURL('https://github.com/kanzitelli/rn-bounceable')}>
+          <Text style={{fontSize: 32, textDecorationLine: 'underline', color: 'blue'}}>
+            RN Bounceable ⎆
+          </Text>
+        </Bounceable>
+      </View>
 
       <View style={S.bounceables}>
         <View style={S.bounceable}>
