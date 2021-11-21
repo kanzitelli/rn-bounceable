@@ -5040,10 +5040,10 @@ rimraf@~2.2.6:
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
   integrity sha1-5Dm+Kq7jJzIZUnMPmaiSnk/FBYI=
 
-rn-bounceable@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/rn-bounceable/-/rn-bounceable-0.0.5.tgz#e6bec75710696dd301526b0a8db1f4d357c4a6f2"
-  integrity sha512-sYPWfbCotlHt88JGwBUUuy6e//feD7xS36QQu5dses43lhC6Kz//22WxZc585kUbXwTWulN1++Wzd43RR1Ir2A==
+rn-bounceable@^0.2.1-rc.19:
+  version "0.2.1-rc.19"
+  resolved "https://registry.yarnpkg.com/rn-bounceable/-/rn-bounceable-0.2.1-rc.19.tgz#10239f5c5453850ddee770f05a8b51499dc41942"
+  integrity sha512-xTGMURJqN8X0OkkhHJmd7+KFybyhF83xTgXx46plUlfhuif+mVUy28E1qHudVZmMMa9RbVbw/ZQviki2XB1xZg==
 
 rsvp@^4.8.4:
   version "4.8.5"
