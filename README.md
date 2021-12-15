@@ -76,7 +76,7 @@ type BounceableProps = {
 
 Examples could be found in `expo-example` folder or in [expo-starter](https://github.com/kanzitelli/expo-starter), [rn-starter](https://github.com/kanzitelli/rn-starter) and [rnn-starter](https://github.com/kanzitelli/rnn-starter).
 
-See it with [Expo Web](https://rn-bounceable.batyr.io) or [Expo Go](https://expo.io/@kanzitelli/rn-bounceable-example)
+See it with [Expo Web](https://rn-bounceable.batyr.io) or [Expo Go](https://expo.io/@kanzitelli/rn-bounceable-example).
 
 This library was bootstrapped from [kanzitelli/if-component](https://github.com/kanzitelli/if-component).
 
