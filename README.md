@@ -2,7 +2,6 @@
   <img src="https://xxx-files.ggc.team/oss/rn-bounceable/logo.png" width="80%" title="Logo">
 </p>
 
-
 ## Quick start
 
 ```bash
@@ -25,6 +24,36 @@ class Screen = () => {
   )
 }
 ```
+
+### Expo Web
+
+Since `rn-bounceable` uses Reanimated 2, we need its Babel plugin to be applied. Expo Web doesn't transpile modules by default, so we'll need to tell it to transpile the library.
+
+1. Install `@expo/webpack-config`:
+
+```
+yarn add -D @expo/webpack-config
+```
+
+2. Create `webpack.config.js` in the root of your project:
+
+```
+const createExpoWebpackConfigAsync = require('@expo/webpack-config')
+
+module.exports = async function (env, argv) {
+  const config = await createExpoWebpackConfigAsync(
+    {
+      ...env,
+      babel: { dangerouslyAddModulePathsToTranspile: ['rn-bounceable'] },
+    },
+    argv
+  )
+
+  return config
+}
+```
+
+Don't forget to add `webpack.config.js` into `tsconfig.json` under `exclude` section, if needed.
 
 ##### Available props
 
