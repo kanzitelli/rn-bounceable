@@ -6,7 +6,7 @@
     "outDir": "lib",
     "declaration": true,
     "skipLibCheck": true,
-    "module": "ES2020",
+    "module": "ESNext"
   },
   "exclude": ["node_modules", "lib", "expo-example"]
 }

@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@expo/webpack-config": "^0.16.13",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
     "tslib": "^2.3.1",
