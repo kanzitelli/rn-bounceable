@@ -5,12 +5,13 @@ import Animated, {
   useAnimatedStyle,
   withSpring,
   runOnJS,
+  WithSpringConfig,
 } from 'react-native-reanimated';
 import {TapGestureHandler, State} from 'react-native-gesture-handler';
 import {useMemo} from 'react';
 
 type PureFunc = () => void;
-export type BounceableProps = {
+export type BounceableProps = React.PropsWithChildren<{
   disabled?: boolean;
   noBounce?: boolean;
   onPress?: PureFunc;
@@ -19,9 +20,9 @@ export type BounceableProps = {
   delayLongPress?: number;
   activeScale?: number;
   delayActiveScale?: number;
-  springConfig?: Animated.WithSpringConfig;
+  springConfig?: WithSpringConfig;
   contentContainerStyle?: StyleProp<ViewStyle>;
-};
+}>;
 
 export const Bounceable: React.FC<BounceableProps> = ({
   children,
