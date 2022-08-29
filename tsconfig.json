@@ -1,12 +1,14 @@
 {
   "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
+    "jsx": "react",
     "noEmit": false,
     "rootDir": "src",
     "outDir": "lib",
     "declaration": true,
     "skipLibCheck": true,
-    "module": "ESNext"
+    "module": "ESNext",
+    "types": ["node"]
   },
   "exclude": ["node_modules", "lib", "expo-example"]
 }
